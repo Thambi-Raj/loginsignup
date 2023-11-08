@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Document</title>
+</head>
+
+<body >   
+  <div> <br>
+    <br>
+    <div class="container" id="container">
+<div class="content2">
+    <div class="imag">
+    <img src="signup.png" alt="">
+    </div>
+    <div class="register">
+      <form action="" class="sign-up-form" id="sig">
+        <h2 class="title">Sign Up</h2>
+        <p class="warn" id="warnmsg">Please fill All Details</p>
+        <div class="input-field" id="field1">
+          <i id="fa-user" class="fa fa-user"></i>
+          <input type="text" placeholder="Username" id="name" onkeyup="checkuser()">
+        </div>
+        <p class="warn" id="uname">Username Must be Alphabets</p>
+        <br>
+        <div class="input-field" id="field2">
+          <i id="fa-envelope" class="fa fa-envelope" id="fa"></i>
+          <input type="text" placeholder="Email" id="email" onblur="checkemail()">
+        </div>
+        <p class="warn" id="emailwarn">Invalid email</p>
+        <br>
+        <div class="input-field" id="field3">
+          <i id="fa-mobile" class="fa fa-mobile-phone" style="font-size:24px"></i>
+          <input type="text" placeholder="Mobile Num" id="mobile" onkeyup="checkmobile()" onblur="checkdigit(10)">
+        </div>
+        <p class="warn" id="mobilewarn">Invalid Mobile Number</p>
+        <br>
+        <div class="input-field" id="field4">
+          <i class="fa fa-calendar " id="fa-cal"></i>
+          <input type="date" id="dob">
+        </div>
+        <br>
+        <div class="input-field-flex">
+          <div class="first">
+          <input type="checkbox" class="passwor" id="pin" onclick="pin1()"><span id="spanmsg">&nbsp;&nbsp;Pin</span>
+          </div>
+          <div class="second">
+          <input type="checkbox" class="passwor" id="pass" onclick="passcheck()"><span id="spanmsg">&nbsp;&nbsp;Password</span>
+        </div>
+      </div>
+      <br>
+        <div class="input-field" id="field5">
+          <i id="fa-lock" class="fa fa-lock"></i>
+          <input type="password" placeholder="Password" id="pas" onkeyup="checkpassword(this.placeholder)">
+        </div>
+        <br>
+        <p id="warnpin" class="warn"></p>
+        <div class="input-field" id="field6">
+          <i id="fa-confirm" class="fa fa-lock"></i>
+          <input type="password" placeholder="Confirm Password" id="confirm-pass" onblur="confirm()">
+        </div>
+        <br>
+        <p id="warnconfirm" class="warn">Password mismatch</p>
+        <input   type="button" value="Sign Up" class="btn-solid" / onclick="register()">
+
+        <p class="social-text">Or Sign up with social platforms</p>
+        <div class="social-media">
+          <a href="#" class="social-icon">
+            <i id="fa-face" class="fa fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i id="fa-twit" class="fa fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i id="fa-goog" class="fa fa-google"></i>
+          </a>
+        </div>
+        <p onclick="transition1()">Already Signed PLease click here!</p>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="javascript.js"></script>
+</body>
